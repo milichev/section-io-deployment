@@ -1,0 +1,35 @@
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+yarn-debug.log*
+yarn-error.log*
+
+# testing
+/coverage
+/config/luft-platform-rest.json
+
+# IDE
+.vscode
+.idea
+
+# production
+/build
+
+.eslintcache
+
+# misc
+.DS_Store
+.env.*.local
+.env.local
+
+npm-debug.log*
+

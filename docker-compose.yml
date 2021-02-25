@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  builder:
+    image: milichev/section-io-deployment-test
+    env_file:
+      # please create this file and declare the env var as follows:
+      # SECTION_TOKEN=12345678-5766-4fcd-b00d-219b9510d2cd:9625b8cd-fe96-4190-ac20-1234567890
+      - .env.local
+    volumes:
+      - ./:/git
+    command: bash deploy.sh

@@ -1,0 +1,20 @@
+{
+  "name": "section-io-deployment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/milichev/section-io-deployment.git",
+  "author": "Vadym Milichev <vadim.milichev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production yarn serve",
+    "dev": "cross-env NODE_ENV=development yarn serve",
+    "serve": "node -r dotenv-flow/config index.js",
+    "docker:build": "docker build -t milichev/section-io-deployment-test .",
+    "docker:compose": "docker-compose run --rm builder"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.31",
+    "cross-env": "^7.0.3",
+    "dotenv-flow": "^3.2.0"
+  }
+}
